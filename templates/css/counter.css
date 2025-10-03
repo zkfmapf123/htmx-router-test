@@ -1,0 +1,8 @@
+@import "/css/common.css";
+
+#counter {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}

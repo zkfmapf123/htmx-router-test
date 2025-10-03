@@ -1,0 +1,9 @@
+root = "."
+tmp_dir = "tmp
+
+[build]
+    cmd = "go run ."
+    include_ext = ["go","html", "css", "js"]
+    exclude_dir = ["tmp","build"]
+    delay = 1000
+    

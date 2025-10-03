@@ -8,19 +8,20 @@ import (
 func main() {
 	g := gin.Default()
 
-	// load templates
-	g.LoadHTMLGlob("./templates/*.html")
+	g.Static("/css", "./templates/css")
+	g.Static("/js", "./templates/js")
+	g.LoadHTMLGlob("./templates/views/*.html")
 
 	// router
-	g.GET("/health", internal.RouterHealth)
+	g.GET("/", internal.DefaultHome)
 
 	counterGroup := g.Group("/counter")
 	{
-		counterGroup.GET("/", internal.RouterCounter)
+		counterGroup.GET("/", internal.Counter)
 		counterGroup.POST("/increment", internal.Increment)
-		counterGroup.POST("/decrease", internal.Decrease)
+		counterGroup.POST("/decrease", internal.Decrement)
 	}
 
-	g.Run(":8080")
+	g.Run(":8081")
 
 }
