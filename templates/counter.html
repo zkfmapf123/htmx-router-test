@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <div>
+        <!-- counter -->
+        <h1 id="counter">Counter: {{ .count }}</h1>
+    </div>
+    <div>
+        <button hx-post="/counter/increment" hx-target="#counter" hx-swap="innerHTML"> Increment </button>
+        <button hx-post="/counter/decrease" hx-target="#counter" hx-swap="innerHTML"> Decrease </button>
+    </div>
+</body>
+</html>
