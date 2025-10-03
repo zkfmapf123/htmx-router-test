@@ -3,7 +3,7 @@ tmp_dir = "tmp
 
 [build]
     cmd = "go run ."
-    include_ext = ["go","html", "css", "js"]
-    exclude_dir = ["tmp","build"]
-    delay = 1000
+    include_ext = ["go","html", "css", "js"] ## Hot reload 대상
+    exclude_dir = ["tmp","build"]            ## 제외
+    delay = 1000                             ## Hot reload 대기시간
     
